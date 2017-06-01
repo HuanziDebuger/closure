@@ -213,64 +213,7 @@
 
    而外说一句：这里并不是说return就是闭包，这里只是强调return的重要性，如果你还是一个新手建议你多看一些初级文章，在来看这篇文章，希望你会有新收获。写这篇文章一开始我也说了它的目的是回顾一下当初我没有理解的地方，当初已经理解的这篇文章并没有过多的去讲。
 
- 
-
-　作用域竟然上面已经讲完了～～～
-
-   
-
-   大前端 369451410欢迎你的加入。
-
- 
-
-   那就说一下this：
-
-　　我们经常用this，但是也许你还不清楚它是什么吧？
-
-         lis[i].onclick=function(){this.style.border="1px solid #ccc";} ;
-
-         此时的this表示lis[?]它的引用。
-
-         这里的i不是i实际上是一个准确的数字：如lis[2].onclick = function(){this.style.border="1px solid #ccc";}; this = lis[2] ；   
-
-     简单来说this它始终引用一个对象。
-
-    　　 lis[2]它也一个对象，是一个HTMLElement对象。
-
-     　　其实不管什么情况下它都会有对象的，这个你不用操心，看
-
-    　　　　function fn(){
-
-    　　　　　this.name = "追梦子";　　　　
-
-              };　　　　
-
-              fn();
-
-              alert(this.name);//追梦子
-
-              //当然也可以这样
-
-    　　　 alert(name);
-
-           虽然这段代码中看似没有对象，但大错特错，因为浏览器环境中默认就有一个window对象，因此你在函数中直接用this.name实际上这个this就表示window。
-
-    　　var json = {
-
-    　　　　name:'yyy',
-
-    　　　　fn:function(){alert(this.name)}　
-
-        };
-
-       json.fn(); // yyy;
-
-　　fn属于json，所以this实际上就是json。
-
-     如果你是初学者建议你暂时先记住这三点，当然this还有很多要说的，不过做为初学者你可以在项目中通过console.log来检查this是否是你预期的那样。
-
-     更多关于this的内容，可以看彻底理解js中this的指向，不必硬背。
-
+　
  
 
      这篇文章并不算是一篇入门的教程，这篇文章主要是总结之前没有理解的地方，或者是以一种更加简单明了的方式写的，当然是按照我自己的理解来的，不一定你能理解，sorry，好了一切就从这里结束吧。
